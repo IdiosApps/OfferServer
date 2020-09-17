@@ -70,8 +70,8 @@ There are four automated tests (they run individually, but unfortunately I wasn'
 
 - httpPutOfferTest - makes a PUT HTTP request to the /api/offers/new endpoint, and ensure the databases' values are correct for the entry
 - httpGetOfferTest - makes a GET HTTP request to /api/offers/1, saves an Offer to the database, GETs it by HTTP request and ensure it's the same as our expected Offer
+- httpCancelOfferTest - saves an Offer with a long expiry time to the database, makes an HTTP PUT request to cancel it, retrieves it, and ensures it has has expired
 - OfferTimeoutTest - saves an Offer to the database with a short expiry time, gets the item after expiry time is up, and ensures it has expired
-- cancelOfferTest - saves an Offer with a long expiry time to the database, makes an HTTP PUT request to cancel it, retrieves it, and ensures it has has expired
 
 ____
 <H1>Assumptions</H1>
